@@ -1,12 +1,18 @@
-const StartCommand = '/st';
+const StartCommand = '/bo';
+const StopCommand = '/ki';
 const SayMessageCommand = '/sa';
 const ActionCommand = '/ac';
 const TranslateSpanish = '/es';
 const TranslateFrench = '/fr';
 const TranslateDutch = '/nl';
+const APP_URL = 'https://apps.facebook.com/playyoworld';
+const BROWSER_DATA_DIRECTORY = 'C:\\Users\\avery\\AppData\\Local\\Chromium\\User Data\\Default';
+const CANVAS_NAME = 'iframe_canvas_fb_https';
 
 export default {
     StartCommand, SayMessageCommand,
     ActionCommand, TranslateSpanish,
-    TranslateFrench, TranslateDutch
+    TranslateFrench, TranslateDutch,
+    StopCommand, APP_URL, CANVAS_NAME,
+    BROWSER_DATA_DIRECTORY
 }

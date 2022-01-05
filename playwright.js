@@ -1,8 +1,9 @@
 import {chromium} from "playwright";
+import yo from './constants.js';
 
 const launch = new Promise((resolve) => {
     chromium.launchPersistentContext(
-        'C:\\Users\\avery\\AppData\\Local\\Chromium\\User Data\\Default',
+        yo.BROWSER_DATA_DIRECTORY,
         {
             headless: false,
             devtools: true
@@ -10,7 +11,7 @@ const launch = new Promise((resolve) => {
         browser.newPage()
             .then(page => {
                 resolve(page);
-                page.goto('https://apps.facebook.com/playyoworld', {
+                page.goto(yo.APP_URL, {
                     timeout: 1337 * 69 * 420
                 });
             })

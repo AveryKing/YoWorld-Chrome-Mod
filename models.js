@@ -1,4 +1,5 @@
 import db from "mongoose";
+
 const connStr = 'mongodb+srv://fullstack:fullstack@cluster0.qynol.mongodb.net/yoworld?retryWrites=true&w=majority';
 
 db.connect(connStr).then((res) => {
@@ -20,22 +21,7 @@ const PlayerSchema = new db.Schema({
 })
 
 const Player = db.model('player', PlayerSchema);
-/*
-await models.Player.find({playerId: data.fromPlayerId})
-            .then(player => {
-                if(!player) {
-                    let playerNames = []
-                    playerNames.push(data.fromPlayerName);
-                    player = new models.Player({
-                        playerNames: playerNames,
-                        playerId: data.fromPlayerId
-                    })
-                     player.save().then(res => {
-                         console.log(res)
-                     })
-                }
-            })
-*/
+
 export default {
     ChatMessage, Player
 }

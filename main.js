@@ -10,11 +10,13 @@ import yo from './constants.js';
                 try {
                     const {data} = JSON.parse(message.text());
                     let msg = data.messageText;
-                    let cmd = msg.substr(0, 3);
+                    let cmd = data.messageText.substr(0, 3);
                     switch (cmd) {
                         case yo.StartCommand:
                             yoBot = new YoBot(page);
                             break;
+                        case yo.StopCommand:
+                            yoBot.disable();
                         case yo.SayMessageCommand:
                             await yoBot.sendChat(msg.substr(4));
                             break;
