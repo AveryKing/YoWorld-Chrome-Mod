@@ -19,11 +19,12 @@ import logger from "./logger.js";
                             } else if (msgTxt.startsWith('/action')) {
                                 await yoBot.sendChat(page, `<${msgTxt.substr(7).replace(' ', '')}>`);
 
-                            } else if (msgTxt.startsWith('/es')) {
-                                yoBot.translate(msgTxt.substr(3),'es')
-                                    .then(translatedText => yoBot.sendChat(page,translatedText));
+                            } else if (msgTxt.startsWith('/es')
+                                    || msgTxt.startsWith('/fr')
+                                    || msgTxt.startsWith('/nl')) {
+                                yoBot.translate(msgTxt.substr(3), msgTxt.substr(1, 2))
+                                    .then(translatedText => yoBot.sendChat(page, translatedText));
                             }
-                          //  await yoLogger.logChat(data);
                             break;
                     }
                 } catch (e) {
