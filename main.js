@@ -8,16 +8,19 @@ mongoose.connect(connStr).then((res) => {
 });
 
 (async () => {
-    const page = await pw.launch();
-    page.on('console', async msg => {
-        try {
-            const {cmd, data} = JSON.parse(msg.text());
-            switch(cmd) {
-                case 'logChatMessage':
-                    await yoLogger.logChatMessage(data);
-                    break;
-            }
-        } catch(e) {}
-    })
+    (pw.launch
+        .then(page => {
+            page.on('console', async msg => {
+                try {
+                    const {cmd, data} = JSON.parse(msg.text());
+                    switch (cmd) {
+                        case 'logChatMessage':
+                            await yoLogger.logChatMessage(data);
+                            break;
+                    }
+                } catch (e) {
+                }
+            })
+        }));
 
 })();
