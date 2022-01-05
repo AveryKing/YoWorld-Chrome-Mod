@@ -1,25 +1,20 @@
-import yoBot from './actions.js';
+import doClick from './doClick.js';
 
- async function createEvent (page, eventName, eventDescription) {
-    const yoCanvasName = 'iframe_canvas_fb_https';
-    await yoBot.doClick(page,422, 593);
-    await yoBot.doClick(page,539, 499);
-    await yoBot.doClick(page,353, 214);
+ async function createEvent (yoFrame, eventName, eventDescription) {
+    await doClick(yoFrame,422, 593);
+    await doClick(yoFrame,539, 499);
+    await doClick(yoFrame,353, 214);
 
-    await page.frame({
-        name: yoCanvasName
-    }).fill('#stage0 textarea', eventName, {force: true});
+    await yoFrame.fill('#stage0 textarea', eventName, {force: true});
 
-    await yoBot.doClick(page,375, 279);
+    await doClick(yoFrame,375, 279);
 
-    await page.frame({
-        name: yoCanvasName
-    }).fill('#stage0 textarea', eventDescription, {force: true});
-    await yoBot.doClick(page,457, 167);
-    await yoBot.doClick(page,382, 211);
-    await yoBot.doClick(page,458, 367);
-    await yoBot.doClick(page,419, 407);
-    await yoBot.doClick(page,461, 455);
+    await yoFrame.fill('#stage0 textarea', eventDescription, {force: true});
+    await doClick(yoFrame,457, 167);
+    await doClick(yoFrame,382, 211);
+    await doClick(yoFrame,458, 367);
+    await doClick(yoFrame,419, 407);
+    await doClick(page,461, 455);
 }
 
 export default createEvent;

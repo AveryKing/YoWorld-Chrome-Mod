@@ -1,14 +1,10 @@
-import yoBot from './actions.js';
+import doClick from './doClick.js';
 
-export default async function sendChat(page, chatMessage) {
-    const yoCanvasName = 'iframe_canvas_fb_https';
-    await yoBot.doClick(page,356, 544);
-    await page.frame({
-        name: yoCanvasName
-    }).fill('#stage0 textarea', chatMessage, {force: true});
-    await page.frame({
-        name: yoCanvasName
-    }).press('#stage0 textarea', 'Enter');
+export default async function sendChat(yoFrame, chatMessage) {
+   // console.table(yoFrame);
+    await doClick(yoFrame,356, 544);
+    await yoFrame.fill('#stage0 textarea', chatMessage, {force: true});
+    await yoFrame.press('#stage0 textarea', 'Enter');
 }
 
 

@@ -1,32 +1,35 @@
 import pw from './playwright.js';
-import yoLogger from './logger.js'
-import yoBot from './actions/actions.js'
-import logger from "./logger.js";
+import YoBot from './actions/actions.js'
+import yo from './constants.js';
 
 (async () => {
     (pw.launch
-        .then(page => {
-            page.on('console', async msg => {
+        .then(async page => {
+            let yoBot;
+            page.on('console', async message => {
                 try {
-                    const {cmd, data} = JSON.parse(msg.text());
+                    const {data} = JSON.parse(message.text());
+                    let msg = data.messageText;
+                    let cmd = msg.substr(0, 3);
                     switch (cmd) {
-                        case 'logChatMessage':
-                            let msgTxt = data.messageText;
-
-                            if (msgTxt.startsWith('/say')) {
-                                await yoBot.sendChat(page, msgTxt.substr(4));
-
-                            } else if (msgTxt.startsWith('/action')) {
-                                await yoBot.sendChat(page, `<${msgTxt.substr(7).replace(' ', '')}>`);
-
-                            } else if (msgTxt.startsWith('/es')
-                                    || msgTxt.startsWith('/fr')
-                                    || msgTxt.startsWith('/nl')) {
-                                yoBot.translate(msgTxt.substr(3), msgTxt.substr(1, 2))
-                                    .then(translatedText => yoBot.sendChat(page, translatedText));
-                            }
+                        case yo.StartCommand:
+                            yoBot = new YoBot(page);
                             break;
+                        case yo.SayMessageCommand:
+                            await yoBot.sendChat(msg.substr(4));
+                            break;
+                        case yo.ActionCommand:
+                            await yoBot.sendChat(`<${msg.substr(7).replace(' ', '')}>`);
+                            break;
+                        case yo.TranslateSpanish:
+                        case yo.TranslateFrench:
+                        case yo.TranslateDutch:
+                            await yoBot.translate(msg.substr(3), msg.substr(1, 2))
+                                .then(translatedText => yoBot.sendChat(translatedText));
+                            break;
+
                     }
+
                 } catch (e) {
                 }
             })

@@ -1,8 +1,7 @@
-export default async function doClick(page, x, y)  {
-    const yoCanvasName = 'iframe_canvas_fb_https';
-    await page.frame({
-        name: yoCanvasName
-    }).click('canvas', {
+import yoBot from './actions.js';
+
+export default async function doClick(yoFrame, x, y)  {
+    await yoFrame.click('canvas', {
         position: {
             x: x,
             y: y
