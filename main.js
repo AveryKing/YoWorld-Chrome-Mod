@@ -11,11 +11,13 @@ import yoBot from './actions/actions.js'
                     const {cmd, data} = JSON.parse(msg.text());
                     switch (cmd) {
                         case 'logChatMessage':
-
-                            if(data.messageText.startsWith('/say')) {
-                                await yoBot.sendChatMessage(page,data.messageText.substr(4));
+                            let msgTxt = data.messageText;
+                            if (msgTxt.startsWith('/say')) {
+                                await yoBot.sendChat(page, msgTxt.substr(4));
+                            } else if (msgTxt.startsWith('/action')) {
+                                await yoBot.sendChat(page, `<${msgTxt.substr(7).replace(' ', '')}>`);
                             }
-                            await yoLogger.logChatMessage(data);
+                            await yoLogger.logChat(data);
                             break;
                     }
                 } catch (e) {

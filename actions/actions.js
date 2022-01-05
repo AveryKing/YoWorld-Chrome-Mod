@@ -1,7 +1,7 @@
 import doClick from './doClick.js';
 import createEvent from './createEvent.js';
-import sendChatMessage from './sendChatMessage.js';
+import sendChat from './sendChat.js';
 
 export default {
-    doClick, createEvent, sendChatMessage
+    doClick, createEvent, sendChat
 }

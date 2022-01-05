@@ -4,7 +4,7 @@ import db from 'mongoose';
 const connStr = 'mongodb+srv://fullstack:fullstack@cluster0.qynol.mongodb.net/yoworld?retryWrites=true&w=majority';
 
 
-async function logChatMessage({fromPlayerName, messageText, fromPlayerId}) {
+async function logChat({fromPlayerName, messageText, fromPlayerId}) {
     const message = new models.ChatMessage({
         fromPlayerName: fromPlayerName,
         fromPlayerId: fromPlayerId,
@@ -18,5 +18,5 @@ async function logChatMessage({fromPlayerName, messageText, fromPlayerId}) {
 }
 
 export default {
-    logChatMessage
+    logChat
 }
