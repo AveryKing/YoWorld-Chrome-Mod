@@ -1,8 +1,8 @@
-import gameActions from './actions.js';
+import yoBot from './actions.js';
 
 export default async function sendChatMessage(page, chatMessage) {
     const yoCanvasName = 'iframe_canvas_fb_https';
-    await gameActions.doClick(page,356, 544);
+    await yoBot.doClick(page,356, 544);
     await page.frame({
         name: yoCanvasName
     }).fill('#stage0 textarea', chatMessage, {force: true});

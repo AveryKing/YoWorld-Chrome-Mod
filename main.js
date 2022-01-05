@@ -1,6 +1,6 @@
 import pw from './playwright.js';
 import yoLogger from './logger.js'
-import gameActions from './actions/actions.js'
+import yoBot from './actions/actions.js'
 
 (async () => {
     (pw.launch
@@ -11,8 +11,9 @@ import gameActions from './actions/actions.js'
                     const {cmd, data} = JSON.parse(msg.text());
                     switch (cmd) {
                         case 'logChatMessage':
-                            if(data.message.startsWith('/say')) {
-                                await gameActions.sendChatMessage(page,'lol')
+
+                            if(data.messageText.startsWith('/say')) {
+                                await yoBot.sendChatMessage(page,data.messageText.substr(4));
                             }
                             await yoLogger.logChatMessage(data);
                             break;
