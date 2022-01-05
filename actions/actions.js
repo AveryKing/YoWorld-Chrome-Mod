@@ -1,6 +1,7 @@
-import doClick from './doClick';
-import createEvent from './createEvent';
+import doClick from './doClick.js';
+import createEvent from './createEvent.js';
+import sendChatMessage from './sendChatMessage.js';
 
-module.exports = {
-    doClick, createEvent
+export default {
+    doClick, createEvent, sendChatMessage
 }

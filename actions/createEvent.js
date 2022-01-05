@@ -1,6 +1,6 @@
-import gameActions from "./actions/actions";
+import gameActions from './actions.js';
 
-export default async function createEvent (page, eventName, eventDescription) {
+ async function createEvent (page, eventName, eventDescription) {
     const yoCanvasName = 'iframe_canvas_fb_https';
     await gameActions.doClick(page,422, 593);
     await gameActions.doClick(page,539, 499);
@@ -21,3 +21,5 @@ export default async function createEvent (page, eventName, eventDescription) {
     await gameActions.doClick(page,419, 407);
     await gameActions.doClick(page,461, 455);
 }
+
+export default createEvent;

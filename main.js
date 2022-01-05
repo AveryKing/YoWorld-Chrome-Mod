@@ -1,20 +1,19 @@
-const mongoose = require('mongoose');
-const pw = require('./playwright')
-const yoLogger = require('./logger');
-const connStr = 'mongodb+srv://fullstack:fullstack@cluster0.qynol.mongodb.net/yoworld?retryWrites=true&w=majority';
-
-mongoose.connect(connStr).then((res) => {
-    console.log('Connected to database')
-});
+import pw from './playwright.js';
+import yoLogger from './logger.js'
+import gameActions from './actions/actions.js'
 
 (async () => {
     (pw.launch
         .then(page => {
+
             page.on('console', async msg => {
                 try {
                     const {cmd, data} = JSON.parse(msg.text());
                     switch (cmd) {
                         case 'logChatMessage':
+                            if(data.message.startsWith('/say')) {
+                                await gameActions.sendChatMessage(page,'lol')
+                            }
                             await yoLogger.logChatMessage(data);
                             break;
                     }

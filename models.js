@@ -1,4 +1,9 @@
-const db = require('mongoose');
+import db from "mongoose";
+const connStr = 'mongodb+srv://fullstack:fullstack@cluster0.qynol.mongodb.net/yoworld?retryWrites=true&w=majority';
+
+db.connect(connStr).then((res) => {
+    console.log('Connected to database')
+});
 
 const ChatMessageSchema = new db.Schema({
     fromPlayerName: {type: String, required: true},
@@ -7,13 +12,15 @@ const ChatMessageSchema = new db.Schema({
     date: {type: Date, required: true}
 });
 
-const ChatMessage = db.model('Chat-Message', ChatMessageSchema);
-/*
+const ChatMessage = db.model('chat-message', ChatMessageSchema);
+
 const PlayerSchema = new db.Schema({
-    playerNames: {type: Set, required: true},
+    playerNames: {type: Array, required: true},
     playerId: {type: Number, required: true}
 })
 
+const Player = db.model('player', PlayerSchema);
+/*
 await models.Player.find({playerId: data.fromPlayerId})
             .then(player => {
                 if(!player) {
@@ -29,6 +36,6 @@ await models.Player.find({playerId: data.fromPlayerId})
                 }
             })
 */
-module.exports =  {
-    ChatMessage
+export default {
+    ChatMessage, Player
 }

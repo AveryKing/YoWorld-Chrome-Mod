@@ -1,4 +1,4 @@
-const gameActions = require("./actions/actions");
+import gameActions from './actions.js';
 
 export default async function sendChatMessage(page, chatMessage) {
     const yoCanvasName = 'iframe_canvas_fb_https';
@@ -10,3 +10,5 @@ export default async function sendChatMessage(page, chatMessage) {
         name: yoCanvasName
     }).press('#stage0 textarea', 'Enter');
 }
+
+

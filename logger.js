@@ -1,17 +1,22 @@
-const models = require('./models');
+import models from './models.js';
+import db from 'mongoose';
 
-async function logChatMessage({fromPlayerName,messageText,fromPlayerId}) {
-    console.log('in da logger');
-    const ChatMessage = new models.ChatMessage({
+const connStr = 'mongodb+srv://fullstack:fullstack@cluster0.qynol.mongodb.net/yoworld?retryWrites=true&w=majority';
+
+
+async function logChatMessage({fromPlayerName, messageText, fromPlayerId}) {
+    const message = new models.ChatMessage({
         fromPlayerName: fromPlayerName,
+        fromPlayerId: fromPlayerId,
         messageText: messageText,
-        playerId: fromPlayerId,
         date: Date.now()
     })
-    await ChatMessage.save()
+    db.connect(connStr).then(() => {
+        message.save()
+    });
 
 }
 
-module.exports = {
+export default {
     logChatMessage
-};
+}

@@ -1,4 +1,4 @@
-export default async function(page, x, y)  {
+export default async function doClick(page, x, y)  {
     const yoCanvasName = 'iframe_canvas_fb_https';
     await page.frame({
         name: yoCanvasName
@@ -9,4 +9,3 @@ export default async function(page, x, y)  {
         }, force: true
     });
 }
-
