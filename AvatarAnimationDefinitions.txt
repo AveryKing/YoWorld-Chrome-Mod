@@ -1,0 +1,41 @@
+ globalThis.asc.cl$(e, "MyLife.YovilleAvatar::AvatarAnimationDefinitions"), e.ACTION_TO_TRIGGER_HASH = {}, e
+                            .TRIGGER_TO_ACTION_HASH = {}, e.TRIGGER_TO_MPA_HASH = {}
+                    })
+                }(), e.STAND_FRONT = "standFront", e.STAND_BACK = "standBack", e.WALK_FRONT = "walkFront", e.WALK_BACK = "walkBack", e.SHOOT_ARROW =
+                "CupidArrowXO2017", e.WATER_BALLOON_THROW = "WaterBalloonToss", e.CUPCAKE_THROW = "CupcakeToss", e.DONATION_FLOAT = "DonationAction", e
+                .ARM_SHUFFLE = "armShuffleFront", e.JUMPING_JACKS = "jumpingJacksFront", e.ROBOT_DANCE = "robotDanceFront", e.JUMP_AND_SWING =
+                "jumpAndSwingFront", e.POWER_JUMP = "powerJumpFront", e.MYSTIC_LEVITATION = "mysticLevitationFront", e.YOU_DA_BOMB = "youDaBombFront", e
+                .TOUCHDOWN = "touchdown", e.MOON_WALK = "moonWalk", e.LAUGH = "laugh", e.CHEER = "cheer", e.SIT_UPS = "sitUps", e.PASS_GAS = "passGas", e
+                .AIR_GUITAR = "airGuitar", e.IN_LOVE = "lovie", e.POP_AND_LOCK = "popNLock", e.KRUNK = "krunkDance", e.RUNNING_MAN = "runningManDance", e
+                .HEAD_SPIN = "headStandDance", e.HIP_HOP_SPIN = "hipHopSpin", e.WAVE = "wave", e.CANCAN = "cancanDance", e.EGYPTIAN = "egyptian", e.YAWN =
+                "yawn", e.TOO_COOL = "kewel4U", e.IM_HOT = "hotPose", e.PET_PET = "petPet", e.QUICK_DANCE = "quickDance", e.QUICK_APPLAUSE =
+                "quickApplause", e.FOOT_TAP = "footTap", e.ANGRY = "angry", e.BACK_FLIP = "backFlip", e.KUNGFU = "kungFu", e.PU = "pu", e.SHADOW_BOXING =
+                "shadowBoxing", e.DISCO = "disco", e.UBER = "uber", e.IMPATIENT = "impatientPose", e.MEDITATION = "meditatePose", e.MODEL_FABULOUS =
+                "modelFabulous", e.SIT_ON_GROUND = "sitOnGround", e.BE_GONE = "talkToTheHand", e.TOUGH_GUY = "toughGuy", e.ACTION_TRIGGER_GROUP = "ACTIONS",
+                e.__block1 = function() {
+                    globalThis.asc.stb(e, function() {
+                        e.ACTION_TO_TRIGGER_HASH[e.JUMPING_JACKS] = "<jj>", e.ACTION_TO_TRIGGER_HASH[e.MYSTIC_LEVITATION] = "<mp>", e
+                            .ACTION_TO_TRIGGER_HASH[e.POWER_JUMP] = "<pj>", e.ACTION_TO_TRIGGER_HASH[e.YOU_DA_BOMB] = "<bomb>", e
+                            .ACTION_TO_TRIGGER_HASH[e.AIR_GUITAR] = "<guitar>", e.ACTION_TO_TRIGGER_HASH[e.ANGRY] = "<angry>", e
+                            .ACTION_TO_TRIGGER_HASH[e.BACK_FLIP] = "<flip>", e.ACTION_TO_TRIGGER_HASH[e.KUNGFU] = "<kungfu>", e
+                            .ACTION_TO_TRIGGER_HASH[e.LAUGH] = "<rofl>", e.ACTION_TO_TRIGGER_HASH[e.IN_LOVE] = "<inlove>", e.ACTION_TO_TRIGGER_HASH[
+                                e.PU] = "<pu>", e.ACTION_TO_TRIGGER_HASH[e.SHADOW_BOXING] = "<box>", e.ACTION_TO_TRIGGER_HASH[e.SIT_UPS] =
+                            "<situps>", e.ACTION_TO_TRIGGER_HASH[e.TOUCHDOWN] = "<td>", e.ACTION_TO_TRIGGER_HASH[e.WAVE] = "<wave>", e
+                            .ACTION_TO_TRIGGER_HASH[e.YAWN] = "<yawn>", e.ACTION_TO_TRIGGER_HASH[e.ARM_SHUFFLE] = "<as>", e.ACTION_TO_TRIGGER_HASH[e
+                                .JUMP_AND_SWING] = "<jas>", e.ACTION_TO_TRIGGER_HASH[e.ROBOT_DANCE] = "<robot>", e.ACTION_TO_TRIGGER_HASH[e
+                            .CANCAN] = "<cc>", e.ACTION_TO_TRIGGER_HASH[e.DISCO] = "<disco>", e.ACTION_TO_TRIGGER_HASH[e.EGYPTIAN] = "<egypt>", e
+                            .ACTION_TO_TRIGGER_HASH[e.HEAD_SPIN] = "<hs>", e.ACTION_TO_TRIGGER_HASH[e.HIP_HOP_SPIN] = "<hhs>", e
+                            .ACTION_TO_TRIGGER_HASH[e.KRUNK] = "<krunk>", e.ACTION_TO_TRIGGER_HASH[e.MOON_WALK] = "<mw>", e.ACTION_TO_TRIGGER_HASH[e
+                                .POP_AND_LOCK] = "<pl>", e.ACTION_TO_TRIGGER_HASH[e.RUNNING_MAN] = "<rm>", e.ACTION_TO_TRIGGER_HASH[e.UBER] =
+                            "<uber>", e.ACTION_TO_TRIGGER_HASH[e.IM_HOT] = "<hot>", e.ACTION_TO_TRIGGER_HASH[e.IMPATIENT] = "<impatient>", e
+                            .ACTION_TO_TRIGGER_HASH[e.MEDITATION] = "<meditate>", e.ACTION_TO_TRIGGER_HASH[e.TOO_COOL] = "<kewl>", e
+                            .ACTION_TO_TRIGGER_HASH[e.MODEL_FABULOUS] = "<model>", e.ACTION_TO_TRIGGER_HASH[e.SIT_ON_GROUND] = "<sit>", e
+                            .ACTION_TO_TRIGGER_HASH[e.BE_GONE] = "<go>", e.ACTION_TO_TRIGGER_HASH[e.TOUGH_GUY] = "<tg>", e.ACTION_TO_TRIGGER_HASH[e
+                                .CHEER] = "<cheer>", e.ACTION_TO_TRIGGER_HASH[e.PASS_GAS] = "<fart>", e.ACTION_TO_TRIGGER_HASH[e.PET_PET] = "<pet>",
+                            e.ACTION_TO_TRIGGER_HASH[e.QUICK_DANCE] = "<quickdance>", e.ACTION_TO_TRIGGER_HASH[e.QUICK_APPLAUSE] = "<clap>", e
+                            .ACTION_TO_TRIGGER_HASH[e.FOOT_TAP] = "<foottap>"
+                    })
+                }(), e
+        }();
+        e.AvatarAnimationDefinitions = t
+    }(e.YovilleAvatar || (e.YovilleAvatar = {}))
