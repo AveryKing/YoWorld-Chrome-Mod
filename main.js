@@ -34,6 +34,7 @@ import yo from './constants.js';
                         case yo.TranslateSpanish:
                         case yo.TranslateFrench:
                         case yo.TranslateDutch:
+                        case yo.TranslateArabic:
                             await yoBot.translate(msg.substr(3), msg.substr(1, 2))
                                 .then(translatedText => yoBot.sendChat(translatedText));
                             break;

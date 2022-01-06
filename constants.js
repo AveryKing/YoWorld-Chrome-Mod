@@ -5,6 +5,7 @@ const ActionCommand = '/ac';
 const SendHeartCommand = '/he';
 const SendGiftCommand = '/gi';
 const TranslateSpanish = '/es';
+const TranslateArabic = '/tr';
 const TranslateFrench = '/fr';
 const TranslateDutch = '/nl';
 const APP_URL = 'https://apps.facebook.com/playyoworld';
@@ -17,5 +18,5 @@ export default {
     TranslateFrench, TranslateDutch,
     StopCommand, APP_URL, CANVAS_NAME,
     BROWSER_DATA_DIRECTORY,SendHeartCommand,
-    SendGiftCommand
+    SendGiftCommand,TranslateArabic
 }

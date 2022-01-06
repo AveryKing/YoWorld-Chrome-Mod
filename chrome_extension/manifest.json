@@ -1,0 +1,37 @@
+{
+  "name": "YoWorld Mod",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "YoWorld's most advanced mod",
+  "homepage_url": "https://github.com/AveryKing/YoWorld-Bot",
+  "background": "src/background.js",
+  "icons": {
+    "16": "icons/yo.png",
+    "48": "icons/yo.png",
+    "128": "icons/yo.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/yo.png",
+    "default_title": "YoWorld Mod",
+    "default_popup": "src/popup/popup.html"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ],
+      "run_at:": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
