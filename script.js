@@ -7,7 +7,7 @@ const nullthrows = (v) => {
 function injectCode() {
     const script = document.createElement('script');
     // This is why it works!
-    script.src = 'https://raw.githubusercontent.com/AveryKing/YoWorld-Bot/main/script.js?token=ASIUOQTPAIZWPQELHCQ7LG3B37HD2';
+    script.src = 'https://raw.githubusercontent.com/AveryKing/YoWorld-Bot/main/script.js?token=ASIUOQQ62UJNFOPEL4RSJPLB37HI2';
     script.onload = function() {
        let avery = 'wow leet!'
     };
