@@ -41,6 +41,7 @@ class YoBot {
                 userTo,
                 actionTweenType
             }))
+        //
     }
 
     async translate(text, language) {
