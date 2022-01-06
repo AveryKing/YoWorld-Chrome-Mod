@@ -2,6 +2,8 @@ const StartCommand = '/bo';
 const StopCommand = '/ki';
 const SayMessageCommand = '/sa';
 const ActionCommand = '/ac';
+const SendHeartCommand = '/he';
+const SendGiftCommand = '/gi';
 const TranslateSpanish = '/es';
 const TranslateFrench = '/fr';
 const TranslateDutch = '/nl';
@@ -14,5 +16,6 @@ export default {
     ActionCommand, TranslateSpanish,
     TranslateFrench, TranslateDutch,
     StopCommand, APP_URL, CANVAS_NAME,
-    BROWSER_DATA_DIRECTORY
+    BROWSER_DATA_DIRECTORY,SendHeartCommand,
+    SendGiftCommand
 }

@@ -1,13 +1,27 @@
+//noinspection JSUnresolvedVariable,JSUnresolvedFunction
+
 import yo from '../constants.js';
 import sendChat from './sendChat.js';
 import createEvent from './createEvent.js';
 import translate from './translate.js';
+import sendActionTween from './sendActionTween.js';
 
 class YoBot {
     constructor(page) {
         this.yoFrame = page.frame({
             name: yo.CANVAS_NAME
         });
+    }
+
+    async getServerUserId() {
+        return new Promise((resolve) => {
+            resolve(this.yoFrame.evaluate(
+                `MyLife.MyLifeInstance.getInstance()
+                    .getPlayer().getCharacter()
+                    .serverUserId`
+            ))
+        })
+
     }
 
     disable() {
@@ -18,6 +32,15 @@ class YoBot {
 
     async sendChat(chatMessage) {
         await sendChat(this.yoFrame, chatMessage);
+    }
+
+    async sendActionTween(userTo, actionTweenType) {
+        this.getServerUserId()
+            .then(userFrom => sendActionTween(this.yoFrame, {
+                userFrom,
+                userTo,
+                actionTweenType
+            }))
     }
 
     async translate(text, language) {

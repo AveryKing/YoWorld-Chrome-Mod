@@ -9,8 +9,9 @@ import yo from './constants.js';
             page.on('console', async message => {
                 try {
                     const {data} = JSON.parse(message.text());
-                    let msg = data.messageText;
-                    let cmd = data.messageText.substr(0, 3);
+                    const {messageText, fromServerUserId} = data;
+                    let msg = messageText;
+                    let cmd = messageText.substr(0, 3);
                     switch (cmd) {
                         case yo.StartCommand:
                             yoBot = new YoBot(page);
@@ -24,6 +25,11 @@ import yo from './constants.js';
                         case yo.ActionCommand:
                             await yoBot.sendChat(`<${msg.substr(7).replace(' ', '')}>`);
                             break;
+                        case yo.SendHeartCommand:
+                            await yoBot.sendActionTween(fromServerUserId, 'HEART');
+                            break;
+                        case yo.SendGiftCommand:
+                            await yoBot.sendActionTween(fromServerUserId, 'GIFT');
                         case yo.TranslateSpanish:
                         case yo.TranslateFrench:
                         case yo.TranslateDutch:
