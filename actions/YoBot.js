@@ -1,10 +1,10 @@
 //noinspection JSUnresolvedVariable,JSUnresolvedFunction
 
 import yo from '../constants.js';
-import sendChat from './sendChat.js';
-import createEvent from './createEvent.js';
+import send_chat from './send_chat.js';
+import create_event from './create_event.js';
 import translate from './translate.js';
-import sendActionTween from './sendActionTween.js';
+import send_action_tween from './send_action_tween.js';
 
 class YoBot {
     constructor(page) {
@@ -31,12 +31,12 @@ class YoBot {
     }
 
     async sendChat(chatMessage) {
-        await sendChat(this.yoFrame, chatMessage);
+        await send_chat(this.yoFrame, chatMessage);
     }
 
     async sendActionTween(userTo, actionTweenType) {
         this.getServerUserId()
-            .then(userFrom => sendActionTween(this.yoFrame, {
+            .then(userFrom => send_action_tween(this.yoFrame, {
                 userFrom,
                 userTo,
                 actionTweenType
@@ -46,12 +46,12 @@ class YoBot {
     async translate(text, language) {
         translate(text, language)
             .then((translatedText) => {
-                sendChat(this.yoFrame, translatedText)
+                send_chat(this.yoFrame, translatedText)
             });
     }
 
     async createEvent(name, description) {
-        await createEvent(this.yoFrame, name, description);
+        await create_event(this.yoFrame, name, description);
     }
 
 

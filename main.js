@@ -1,5 +1,5 @@
 import pw from './playwright.js';
-import YoBot from './actions/actions.js'
+import YoBot from './actions/YoBot.js'
 import yo from './constants.js';
 
 (async () => {

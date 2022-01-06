@@ -1,6 +1,6 @@
 //noinspection JSUnresolvedVariable,JSUnresolvedFunction
 
-export default async function sendActionTween(yoFrame, actionTweenData) {
+export default async function send_action_tween(yoFrame, actionTweenData) {
     await yoFrame.evaluate((actionTweenData) => {
         const {userFrom, userTo, actionTweenType} = actionTweenData
         let actionTween;
