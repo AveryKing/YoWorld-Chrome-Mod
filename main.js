@@ -30,6 +30,7 @@ import yo from './constants.js';
                             break;
                         case yo.SendGiftCommand:
                             await yoBot.sendActionTween(fromServerUserId, 'GIFT');
+                            break;
                         case yo.TranslateSpanish:
                         case yo.TranslateFrench:
                         case yo.TranslateDutch:
