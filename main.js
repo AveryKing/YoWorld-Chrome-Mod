@@ -17,6 +17,7 @@ import yo from './constants.js';
                             break;
                         case yo.StopCommand:
                             yoBot.disable();
+                            break;
                         case yo.SayMessageCommand:
                             await yoBot.sendChat(msg.substr(4));
                             break;
