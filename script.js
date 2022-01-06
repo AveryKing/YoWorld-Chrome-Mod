@@ -4,12 +4,12 @@ const nullthrows = (v) => {
     return v;
 }
 
-function injectCode(src) {
+function injectCode() {
     const script = document.createElement('script');
     // This is why it works!
-    script.src = src;
+    script.src = 'https://raw.githubusercontent.com/AveryKing/YoWorld-Bot/main/script.js?token=ASIUOQTPAIZWPQELHCQ7LG3B37HD2';
     script.onload = function() {
-       console.log(69)
+       let avery = 'wow leet!'
     };
 
     // This script runs before the <head> element is created,
@@ -18,4 +18,4 @@ function injectCode(src) {
 }
 
 
-injectCode('http://);
+injectCode()
