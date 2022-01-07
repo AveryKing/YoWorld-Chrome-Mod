@@ -15,7 +15,7 @@ const sendRequest = async (yoData) => {
 }
 
 chrome.runtime.onMessage.addListener(
-    async function (response, sender, sendResponse) {
+    async  (response, sender, sendResponse) => {
         console.log(response)
         try {
             switch (response.cmd) {
