@@ -5,7 +5,7 @@
   "description": "YoWorld's most advanced mod",
   "homepage_url": "https://github.com/AveryKing/YoWorld-Bot",
   "background": {
-    "service_worker": "src/background.js",
+    "service_worker": "src/services/service_worker.js",
     "type": "module"
 
   },
