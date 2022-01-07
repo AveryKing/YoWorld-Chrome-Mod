@@ -1,4 +1,5 @@
 import yo from './constants.js';
+import google from './services/translate.js';
 
 self.oninstall = () => {
 
@@ -38,6 +39,8 @@ chrome.runtime.onMessage.addListener(
                         case yo.TranslateFrench:
                         case yo.TranslateDutch:
                         case yo.TranslateArabic:
+                            await google.translate(msg.substr(3), msg.substr(1, 2))
+                                .then(translatedText => sendChat(translatedText));
                             break;
                     }
             }
