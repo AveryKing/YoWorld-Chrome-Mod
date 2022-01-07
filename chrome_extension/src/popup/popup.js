@@ -1,13 +1,6 @@
-chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-        if(request.action === 'chat') {
-            console.log('Chat message sent');
-        }
-    }
-);
 document.getElementById("controlBtn").addEventListener("click", function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {command: "sendChatMessage"}, function(response) {
+        chrome.tabs.sendMessage(tabs[0].id, {cmd: "sendChatMessage", message:'text'}, function(response) {
 
         });
     });
