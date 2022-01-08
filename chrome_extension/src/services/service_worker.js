@@ -17,7 +17,7 @@ const sendRequest = async (yoData) => {
 }
 
 chrome.runtime.onMessage.addListener(
-    async  (response, sender, sendResponse) => {
+    async (response, sender, sendResponse) => {
         console.log(response)
         try {
             switch (response.cmd) {
@@ -35,12 +35,27 @@ chrome.runtime.onMessage.addListener(
                         case yo.SendGiftCommand:
                             await sendActionTween(fromServerUserId, 'GIFT');
                             break;
+                        case yo.SendLevelCommand:
+                            await sendActionTween(fromServerUserId, 'LEVEL');
+                            break;
+                        case yo.SendTokenCommand:
+                            // not implemented
+                            break;
+                        case yo.SendCoinCommand:
+                            await sendActionTween(fromServerUserId, 'COIN');
+                            break;
+                        case yo.SendEatCommand:
+                            await sendActionTween(fromServerUserId, 'EAT');
+                            break;
+                        case yo.SendMessageCommand:
+                            await sendActionTween(fromServerUserId, 'MESSAGE');
+                            break;
                         case yo.TranslateSpanish:
                         case yo.TranslateFrench:
                         case yo.TranslateDutch:
-                        case yo.TranslateArabic:
+                        case yo.TranslateTurkish:
                             //lang.translate(msg.substr(3), msg.substr(1, 2))
-                              //  .then(translatedText => sendChat(translatedText));
+                            //  .then(translatedText => sendChat(translatedText));
                             break;
                     }
             }
