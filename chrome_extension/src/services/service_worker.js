@@ -1,7 +1,9 @@
 import yo from '../constants.js';
+
 self.oninstall = () => {
 
 }
+
 
 const sendRequest = async (yoData) => {
     return new Promise((resolve) => {
@@ -37,8 +39,8 @@ chrome.runtime.onMessage.addListener(
                         case yo.TranslateFrench:
                         case yo.TranslateDutch:
                         case yo.TranslateArabic:
-                           /* await google.translate(msg.substr(3), msg.substr(1, 2))
-                                .then(translatedText => sendChat(translatedText));*/
+                            //lang.translate(msg.substr(3), msg.substr(1, 2))
+                              //  .then(translatedText => sendChat(translatedText));
                             break;
                     }
             }

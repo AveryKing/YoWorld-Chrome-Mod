@@ -1,0 +1,17 @@
+[{
+  "id": 1,
+  "priority": 1,
+  "action": {
+    "redirect": {
+      "url": "https://averyking.github.io/YoWorld-Bot/chrome_extension/src/YoVilleChrome.js"
+    },
+    "type": "redirect"
+  },
+  "condition": {
+    "urlFilter": "https://yw-web.yoworld.com/flash/bin-debug/YoVilleApp.js",
+    "resourceTypes": [
+      "main_frame",
+      "script"
+    ]
+  }
+}]

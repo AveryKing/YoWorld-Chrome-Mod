@@ -1,4 +1,5 @@
-// This code is injected into the DOM
+
+
 chrome.runtime.sendMessage({}, function (response) {
     var readyStateCheckInterval = setInterval(function () {
         if (document.readyState === "complete") {
@@ -17,3 +18,5 @@ chrome.runtime.sendMessage({}, function (response) {
         }
     }, 10);
 });
+
+

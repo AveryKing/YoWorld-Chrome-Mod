@@ -20,8 +20,17 @@
   "permissions": [
     "tabs",
     "webNavigation",
-    "scripting"
+    "scripting",
+    "webRequest",
+    "declarativeNetRequestWithHostAccess"
   ],
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "1",
+      "enabled": true,
+      "path": "yoJS.json"
+    }]
+  },
   "host_permissions": [
     "https://*/*",
     "http://*/*"
