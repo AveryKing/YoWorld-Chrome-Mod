@@ -13,6 +13,7 @@ const SendEatCommand = '/ea';
 const SendCoinCommand = '/co';
 const SendLevelCommand = '/le';
 const SendTokenCommand = '/to';
+const ShowCommandsCommand = '/cm';
 
 const CANVAS_NAME = 'iframe_canvas_fb_https';
 
@@ -21,5 +22,5 @@ export default {
     ActionCommand, TranslateSpanish,SendCoinCommand,
     TranslateFrench, TranslateDutch,SendEatCommand,
     StopCommand, CANVAS_NAME,SendHeartCommand,SendTokenCommand,
-    SendGiftCommand,TranslateTurkish,SendMessageCommand
+    SendGiftCommand,TranslateTurkish,SendMessageCommand,ShowCommandsCommand
 }
