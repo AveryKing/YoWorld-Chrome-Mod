@@ -26,7 +26,8 @@
         bottom: 16%;
     }
 
-    #buttons {
+    #mainDiv, #commandsDiv, #permissionsDiv {
+        font-family: Ubuntu, Arial, sans-serif;
         position:relative;
         bottom:18%;
     }
@@ -62,6 +63,45 @@
         background: #4d4cef;
 
     }
+
+    #commandsDiv, #permissionsDiv {
+        display: none;
+    }
+    html {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+
+td, th {
+  border: 1px solid rgb(190,190,190);
+  padding: 8px 15px;
+}
+
+th {
+  background-color: rgb(235,235,235);
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(245,245,245);
+}
+
+caption {
+  padding: 10px;
+}
 </style>
 
 
@@ -73,10 +113,103 @@
         <div id="txtDiv">
             <p>YoWorld's Most Advanced Mod</p>
         </div>
-        <div id="buttons">
-            <button class="button-34" role="button">Edit clothing</button>
+        <div id="mainDiv">
+            <button id="showCommands" class="button-34" role="button">Show commands</button>
             <button class="button-34" role="button">Bot options</button><br/>
+            <button id="" class="button-34" role="button">Outfit switcher</button>
+            <button id="showCommands" class="button-34" role="button">Rainbow nameplate</button>
+            
 
+        </div>
+        <div id="permissionsDiv">
+            <h1>Permissions</h1>
+            <a href="#" id="goBack">Go back to main screen</a><br>
+        </div>
+        <div id="commandsDiv"><br />
+            
+           <a href="#" id="goBack">Go back to main screen</a><br>
+           <h1>Commands</h1><br/>
+           <span>Below is a list of available chat commands. You can manage who permissions by <a id="showPermissions" href="#">clicking here</a>.</span>
+           <br/><table>
+            <tr>
+              <th>Command</th>
+              <th>Trigger (chat)</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+                <td>Copy Message</td>
+                <td>/say *message*</td>
+                <td>Can be used to make you say something</td>
+              </tr>
+                
+            <tr>
+              <td>Gift</td>
+              <td>/gift</td>
+              <td>Gift animation</td>
+            </tr>
+            <tr>
+                <td>Heart</td>
+                <td>/heart</td>
+                <td>Heart animation</td>
+              </tr>
+              <tr>
+                <td>Coins</td>
+                <td>/coins</td>
+                <td>Coin animation</td>
+              </tr>
+              <tr>
+                <td>Spanish</td>
+                <td>/es *message*</td>
+                <td>Translates to Spanish</td>
+              </tr>
+              <tr>
+                <td>French</td>
+                <td>/fr *message*</td>
+                <td>French translation</td>
+              </tr>
+              <tr>
+                <td>Turkish</td>
+                <td>/tr</td>
+                <td>Turkish translation</td>
+              </tr>
+              <tr>
+                <td>Turkish</td>
+                <td>/tr</td>
+                <td>Turkish translation</td>
+              </tr>
+              <tr>
+                <td>Turkish</td>
+                <td>/tr</td>
+                <td>Turkish translation</td>
+              </tr>
+              <tr>
+                <td>Turkish</td>
+                <td>/tr</td>
+                <td>Turkish translation</td>
+              </tr>
+              <tr>
+                <td>Turkish</td>
+                <td>/tr</td>
+                <td>Turkish translation</td>
+              </tr>
+              <tr>
+                <td>Turkish</td>
+                <td>/tr</td>
+                <td>Turkish translation</td>
+              </tr>
+              <tr>
+                <td>Turkish</td>
+                <td>/tr</td>
+                <td>Turkish translation</td>
+              </tr>
+              <tr>
+                <td>Turkish</td>
+                <td>/tr</td>
+                <td>Turkish translation</td>
+              </tr>
+                
+                
+                
         </div>
     </div>
 </center>
