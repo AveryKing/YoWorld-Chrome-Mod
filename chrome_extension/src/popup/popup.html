@@ -1,22 +1,83 @@
 <!doctype html>
 
 <style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	h1 {
-		font-size: 2em;
-	}
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+    #mainPopup {
+        padding: 10px;
+        height: 200px;
+        width: 400px;
+        font-family: Ubuntu, Arial, sans-serif;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #headerDiv {
+        position: relative;
+        bottom: 10%;
+    }
+
+    #txtDiv {
+        font-size: 1.2em;
+        position: relative;
+        bottom: 16%;
+    }
+
+    #buttons {
+        position:relative;
+        bottom:18%;
+    }
+
+    /* CSS */
+    .button-34 {
+        background: #5E5DF0;
+        border-radius: 999px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 4px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
+    }
+
+    .button-34:hover {
+        background: rgba(94, 93, 240, 0.91);
+    }
+
+    .button-34:active {
+        background: #4d4cef;
+
+    }
 </style>
 
 
-<div id="mainPopup">
-<h1>YoWorld Mod</h1>
+<center>
+    <div id="mainPopup">
+        <div id="headerDiv">
+            <h1>mod name</h1>
+        </div>
+        <div id="txtDiv">
+            <p>YoWorld's Most Advanced Mod</p>
+        </div>
+        <div id="buttons">
+            <button class="button-34" role="button">Edit clothing</button>
+            <button class="button-34" role="button">Bot options</button><br/>
 
-
-</button></div>
-
+        </div>
+    </div>
+</center>
 <script src="popup.js"></script>

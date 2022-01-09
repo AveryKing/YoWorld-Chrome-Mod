@@ -21,6 +21,9 @@ chrome.runtime.onMessage.addListener(
         console.log(response)
         try {
             switch (response.cmd) {
+                case 'loadingComplete':
+                    await sendWelcomeDialog();
+                    break;
                 case 'chatMessageReceived':
                     const {messageText, fromServerUserId} = response.data;
                     let msg = messageText;
@@ -30,7 +33,7 @@ chrome.runtime.onMessage.addListener(
                             await sendChat(msg.substr(4));
                             break;
                         case yo.SendHeartCommand:
-                            await sendActionTween(fromServerUserId, 'HEART');
+                            await sendActionTween(fromServerUserId, 'HEART');ss
                             break;
                         case yo.SendGiftCommand:
                             await sendActionTween(fromServerUserId, 'GIFT');
@@ -80,3 +83,14 @@ const sendActionTween = async (userTo, tweenType) => {
         tweenType: tweenType
     })
 }
+
+const sendWelcomeDialog = async () => {
+    await sendRequest({
+        cmd: 'sendWelcomeDialog',
+        data:{
+
+        }
+    })
+}
+
+

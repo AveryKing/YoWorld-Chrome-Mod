@@ -1,5 +1,5 @@
 chrome.runtime.sendMessage({}, function (response) {
-    var readyStateCheckInterval = setInterval(function () {
+    const readyStateCheckInterval = setInterval(function () {
         if (document.readyState === "complete") {
             clearInterval(readyStateCheckInterval);
             chrome.runtime.onMessage.addListener(
@@ -10,7 +10,6 @@ chrome.runtime.sendMessage({}, function (response) {
                 }
             );
             window.onmessage = function (yoResponse) {
-                console.table(yoResponse)
                 chrome.runtime.sendMessage(yoResponse.data);
             }
         }
