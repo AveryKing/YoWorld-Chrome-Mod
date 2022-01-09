@@ -53,6 +53,8 @@ chrome.runtime.onMessage.addListener(
                         case yo.SendMessageCommand:
                             await sendActionTween(fromServerUserId, 'MESSAGE');
                             break;
+                        case yo.ShowCommandsCommand:
+                            await showCommands();
                         case yo.TranslateSpanish:
                         case yo.TranslateFrench:
                         case yo.TranslateDutch:
@@ -90,6 +92,22 @@ const sendWelcomeDialog = async () => {
         data:{
 
         }
+    })
+}
+
+const sendPopup = async (title, message) => {
+    await sendRequest({
+        cmd: 'sendPopup',
+        data: {
+            title: title,
+            message: message
+        }
+    })
+}
+
+const showCommands = async () => {
+    await sendRequest({
+        cmd: 'showCommands'
     })
 }
 
