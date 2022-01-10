@@ -4,6 +4,12 @@
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 
+    #currentlySwitching {
+        position:relative;
+        bottom:25px;
+        font-size:1rem;
+    }
+
     #mainPopup {
         padding: 10px;
         height: 200px;
@@ -15,21 +21,43 @@
         font-size: 2em;
     }
 
-    #headerDiv {
+    #headerDiv,#outfitTitle {
         position: relative;
         bottom: 10%;
     }
-
+    #outfitTitle {
+        position:relative;
+        top:15px;
+    }
+     #outfitText {
+         position:relative;
+         bottom:-4px;
+         font-size:0.9rem;
+     }
     #txtDiv {
         font-size: 1.2em;
         position: relative;
         bottom: 16%;
     }
 
-    #mainDiv, #commandsDiv, #permissionsDiv {
+    #switchingOutfits {
+        position:relative;
+        bottom:10px;
+    }
+    #mainDiv, #commandsDiv, #permissionsDiv,#outfitSwitcher {
         font-family: Ubuntu, Arial, sans-serif;
         position:relative;
         bottom:18%;
+    }
+
+    #outfitImages {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+        padding-bottom:20px;
+
     }
 
     /* CSS */
@@ -53,6 +81,7 @@
         width: fit-content;
         word-break: break-word;
         border: 0;
+        margin-bottom:8px;
     }
 
     .button-34:hover {
@@ -64,7 +93,7 @@
 
     }
 
-    #commandsDiv, #permissionsDiv {
+    #commandsDiv, #permissionsDiv, #outfitSwitcher {
         display: none;
     }
     html {
@@ -87,6 +116,12 @@ th {
   background-color: rgb(235,235,235);
 }
 
+#goBack3 {
+    position:relative;
+    top:8px;
+    font-size:0.8rem;
+}
+
 td {
   text-align: center;
 }
@@ -102,6 +137,85 @@ tr:nth-child(odd) td {
 caption {
   padding: 10px;
 }
+
+#goBack {
+    position:relative;
+    top:13px;
+}
+    span {
+        position:relative;
+        bottom:10px;
+    }
+    .container {
+        position: relative;
+        transition: all .2s ease-in-out;
+        width: 100%;
+    }
+    .container-selected {
+        background-color: rgba(14, 193, 14, 0.63);
+        border-radius:10px;
+        position: relative;
+        transition: all .2s ease-in-out;
+        width: 100%;
+
+    }
+    .container:hover {
+        transform: scale(1.1);
+        border-radius: 10px;
+    }
+
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+    #stopSwitching {
+        position:relative;
+        bottom:20px;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+    }
+
+    .container:hover .image {
+        opacity: 0.5;
+    }
+
+    .container:hover .middle {
+        opacity: 1;
+    }
+
+    .text {
+        background-color: #5E5DF0;
+        color: white;
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+    .text:hover {
+        background: rgba(94, 93, 240, 0.91);
+        cursor: pointer;
+    }
+    .text:active {
+        cursor: pointer;
+        background: #4d4cef;
+    }
+    #currentlySwitching {
+        display: none;
+        position:relative;
+        bottom:10px;
+    }
+
 </style>
 
 
@@ -116,19 +230,19 @@ caption {
         <div id="mainDiv">
             <button id="showCommands" class="button-34" role="button">Show commands</button>
             <button class="button-34" role="button">Bot options</button><br/>
-            <button id="" class="button-34" role="button">Outfit switcher</button>
-            <button id="showCommands" class="button-34" role="button">Rainbow nameplate</button>
+            <button id="openSwitcher" class="button-34" role="button">Outfit switcher</button>
+            <button id="openNamplate" class="button-34" role="button">Rainbow nameplate</button>
             
 
         </div>
         <div id="permissionsDiv">
             <h1>Permissions</h1>
-            <a href="#" id="goBack">Go back to main screen</a><br>
+            <a href="#" id="goBack2">Go back to main screen</a><br>
         </div>
         <div id="commandsDiv"><br />
             
            <a href="#" id="goBack">Go back to main screen</a><br>
-           <h1>Commands</h1><br/>
+           <h1>Commands</h1>
            <span>Below is a list of available chat commands. You can manage who permissions by <a id="showPermissions" href="#">clicking here</a>.</span>
            <br/><table>
             <tr>
@@ -209,7 +323,30 @@ caption {
               </tr>
                 
                 
-                
+            </table>
+        </div>
+        <div id="outfitSwitcher">
+            <div id="outfitTitle">
+                <a href="#" id="goBack3">Go back to main screen</a><br>
+                <h1>Outfit switcher</h1>
+            </div>
+            <div id="outfitText">
+
+                <p>This feature allows you to make your character automatically flash back and forth between two different outfits.
+               <br><b>Select 2 outfits below, and then the outfit switcher will start.</b></p>
+            </div>
+                <div id="currentlySwitching">
+                   <p>You are currently switching between these two outfits.</p><br/>
+                    <button id="stopSwitching" class="button-34" role="button">Click to stop</button>
+                    <div id="switchingOutfits">
+<div id="outfitIds" style="display:none;"></div>
+                </div>
+                </div>
+            <div id="outfitImages">
+
+            </div>
+
+
         </div>
     </div>
 </center>
