@@ -21,6 +21,12 @@ chrome.runtime.onMessage.addListener(
         console.log(response)
         try {
             switch (response.cmd) {
+                case 'setupOutfitSwitcher':
+                    let outfitData = response.data;
+                    outfitData.forEach(outfit => {
+                        addOutfitToSwitcher(outfit)
+                    })
+                    break;
                 case 'loadingComplete':
                     await sendWelcomeDialog();
                     break;
@@ -33,7 +39,7 @@ chrome.runtime.onMessage.addListener(
                             await sendChat(msg.substr(4));
                             break;
                         case yo.SendHeartCommand:
-                            await sendActionTween(fromServerUserId, 'HEART');ss
+                            await sendActionTween(fromServerUserId, 'HEART');
                             break;
                         case yo.SendGiftCommand:
                             await sendActionTween(fromServerUserId, 'GIFT');
@@ -70,6 +76,10 @@ chrome.runtime.onMessage.addListener(
 
     }
 );
+
+const addOutfitToSwitcher = (outfit) => {
+
+}
 
 const sendChat = async (message) => {
     await sendRequest({
