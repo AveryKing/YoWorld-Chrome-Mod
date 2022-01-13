@@ -108,6 +108,14 @@ document.getElementById('openSwitcher').onclick = () => {
 
 }
 
+document.querySelector("#toggle-invissy").onclick = () => {
+    chrome.tabs.query({active: true, currentWindow: true}, async (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, {
+            cmd: 'toggleInvissy',
+        })
+    });
+}
+
 function fadeIn(elem, ms) {
     if (!elem)
         return;
