@@ -1,7 +1,7 @@
 # YoWorld-Chrome-Mod
 
 <h2>What is this? </h2>
-<p>This is a mod for the game YoWorld. Gone are the old days of modding that require external programs such as Fiddler. This mod is packed into a Google Chrome extension and requires no software other than Google Chrome to use.</p>
+<p>This is a mod for the game YoWorld. Gone are the old days of modding which required external programs such as Fiddler. This mod is packed into a Google Chrome extension and requires no software other than Google Chrome to use.</p>
 
 <h2> What features does this have? </h2> 
 <p>This mod has the same features as <a href="https://github.com/AveryKing/playwright-yoworld">Playwright YoWorld</a>, plus some extra. Checkout the README at <a href="https://github.com/AveryKing/playwright-yoworld">Playwright YoWorld</a> for further details.</p>
