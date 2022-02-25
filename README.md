@@ -4,7 +4,7 @@
 <p>This is a mod for the game YoWorld. Gone are the old days of modding which required external programs such as Fiddler. This mod is packed into a Google Chrome extension and requires no software other than Google Chrome to use.</p>
 
 <h2> What features does this have? </h2> 
-<p>This mod has the same features as <a href="https://github.com/AveryKing/playwright-yoworld">Playwright YoWorld</a>, plus some extra. Checkout the README at <a href="https://github.com/AveryKing/playwright-yoworld">Playwright YoWorld</a> for further details.</p>
+<p>This mod has the same features as <a href="https://github.com/AveryKing/playwright-yoworld/blob/main/README.md">Playwright YoWorld</a>, plus some extra. Checkout the README at <a href="https://github.com/AveryKing/playwright-yoworld/blob/main/README.md">Playwright YoWorld</a> for further details.</p>
 <h2> How do I use this? </h2>
 <li>Clone this repository: <ul><li><code> git clone https://github.com/AveryKing/YoWorld-Chrome-Mod</code></li></ul>
 <li> Install Google Chrome </li>
