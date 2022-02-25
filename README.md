@@ -12,5 +12,7 @@
 <li> Toggle on "Developer Mode" in the top right </li>
 <li> Select "Load Unpacked" in the top left </li>
 <li> In the popup, select the folder that contains <code>manifest.json</code></li>
+<br/>
 
-<p>That's it! now go on YoWorld and the mod will load. You can access the controls by clicking the icon in your browser's top right corner.</p>
+<p>That's it! now go on YoWorld and the mod will load. You can access the controls by clicking the icon in your browser's top right corner.</p><br/>
+<p>Feel free to modify and distribute this software as you please.</p>
